@@ -46,3 +46,28 @@
 2024-04-14 09:12:23 INFO     Price info: 0 rows updated with [COMMIT]
 2024-04-14 09:12:23 INFO     Import done!
 2024-04-14 09:12:23 INFO     127.0.0.1 - - [14/Apr/2024 09:12:23] "GET /elektrum-fetch/ HTTP/1.1" 200 -
+2024-04-14 09:15:27 INFO      * Detected change in '/Users/eriksklotins/Documents/notebooks/elektrum-ha-import/web-api.py', reloading
+2024-04-14 09:15:36 INFO     Starting import
+2024-04-14 09:15:36 INFO     Fetching results between 2024-04-14 and 2024-04-13
+2024-04-14 09:15:36 INFO     Nothing to import
+2024-04-14 09:15:36 INFO     Updating price info
+2024-04-14 09:15:36 INFO     Price info: 0 rows updated with [COMMIT]
+2024-04-14 09:15:36 INFO     Import done!
+2024-04-14 09:15:36 INFO     127.0.0.1 - - [14/Apr/2024 09:15:36] "GET /elektrum-fetch/ HTTP/1.1" 200 -
+2024-04-14 09:17:25 INFO      * Detected change in '/Users/eriksklotins/Documents/notebooks/elektrum-ha-import/web-api.py', reloading
+2024-04-14 09:39:05 INFO     Starting import
+2024-04-14 09:39:05 INFO     Fetching results between 2024-04-14 and 2024-04-13
+2024-04-14 09:39:05 INFO     Nothing to import
+2024-04-14 09:39:05 INFO     Updating price info
+2024-04-14 09:39:05 INFO     Price info: 0 rows updated with [COMMIT]
+2024-04-14 09:39:05 INFO     Import done!
+2024-04-14 09:39:05 INFO     127.0.0.1 - - [14/Apr/2024 09:39:05] "GET /elektrum-fetch/ HTTP/1.1" 200 -
+2024-04-14 09:39:23 INFO     Starting import
+2024-04-14 09:39:23 INFO     Fetching results between 2024-04-14 and 2024-04-13
+2024-04-14 09:39:23 INFO     Nothing to import
+2024-04-14 09:39:23 INFO     Updating price info
+2024-04-14 09:39:23 INFO     Price info: 0 rows updated with [COMMIT]
+2024-04-14 09:39:23 INFO     Import done!
+2024-04-14 09:39:23 INFO     127.0.0.1 - - [14/Apr/2024 09:39:23] "GET /elektrum-fetch/ HTTP/1.1" 200 -
+2024-04-14 09:39:23 INFO     127.0.0.1 - - [14/Apr/2024 09:39:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-04-14 09:39:29 INFO      * Detected change in '/Users/eriksklotins/Documents/notebooks/elektrum-ha-import/web-api.py', reloading

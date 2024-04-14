@@ -57,7 +57,12 @@ class Response(Resource):
 		logging.info('Import done!')
 
 
-		return {'messge':'Done', 'start': t_start.isoformat(), 'end':t_end.isoformat(), 'count':len(values)}
+		return {
+			'messge':'Done', 
+			'start': t_start.isoformat(), 
+			'end':t_end.isoformat(), 
+			'count':len(values)
+		}
 
 	def post(self):
 		pass
@@ -73,6 +78,7 @@ api.add_resource(Test, '/test/')
 
 
 if __name__ == "__main__":
-  app.run(debug=True,host='0.0.0.0', port=5003)
+  app.run(debug=True,host='0.0.0.0', port=config['PORT'])
+  print(app)
 
 
