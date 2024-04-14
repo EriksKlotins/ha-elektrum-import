@@ -13,9 +13,9 @@ def get_auth_token(session):
     if r1.status_code == 200:
         tokens = extract_all(r1.text, 'data-token="','"',inclusive=False)
         if len(tokens)<2 :
-            print('Token not found!')
             # head = extract_one(r1.text, '<head>','</head>',inclusive=True)
             # print(r1.text)
+            raise Exception(f'Something went wrong! Token not found! Likely an issue with the website')    
             return None
         return tokens[1]
     else:

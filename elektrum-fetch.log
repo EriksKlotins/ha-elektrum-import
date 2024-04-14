@@ -1,0 +1,48 @@
+2024-04-14 09:09:26 INFO     Starting import
+2024-04-14 09:09:26 INFO     127.0.0.1 - - [14/Apr/2024 09:09:26] "[35m[1mGET /elektrum-fetch/ HTTP/1.1[0m" 500 -
+2024-04-14 09:09:26 INFO     127.0.0.1 - - [14/Apr/2024 09:09:26] "[36mGET /elektrum-fetch/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-04-14 09:09:26 INFO     127.0.0.1 - - [14/Apr/2024 09:09:26] "[36mGET /elektrum-fetch/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-04-14 09:09:26 INFO     127.0.0.1 - - [14/Apr/2024 09:09:26] "[36mGET /elektrum-fetch/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-04-14 09:09:26 INFO     127.0.0.1 - - [14/Apr/2024 09:09:26] "[36mGET /elektrum-fetch/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-04-14 09:09:42 INFO      * Detected change in '/Users/eriksklotins/Documents/notebooks/elektrum-ha-import/web-api.py', reloading
+2024-04-14 09:09:47 INFO     Starting import
+2024-04-14 09:09:47 INFO     Fetching results between 2024-04-13 and 2024-04-13
+2024-04-14 09:09:52 INFO     Inserting 24 readings
+2024-04-14 09:09:53 INFO     COMMIT
+2024-04-14 09:09:53 INFO     Updating price info
+2024-04-14 09:09:53 INFO     Price info: 24 rows updated with [COMMIT]
+2024-04-14 09:09:53 INFO     Import done!
+2024-04-14 09:09:53 INFO     127.0.0.1 - - [14/Apr/2024 09:09:53] "GET /elektrum-fetch/ HTTP/1.1" 200 -
+2024-04-14 09:11:05 INFO      * Detected change in '/Users/eriksklotins/Documents/notebooks/elektrum-ha-import/web-api.py', reloading
+2024-04-14 09:11:17 INFO     Starting import
+2024-04-14 09:11:17 INFO     Fetching results between 2024-04-14 and 2024-04-13
+2024-04-14 09:11:17 INFO     Nothing to import
+2024-04-14 09:11:17 INFO     Updating price info
+2024-04-14 09:11:17 INFO     Price info: 0 rows updated with [COMMIT]
+2024-04-14 09:11:17 INFO     Import done!
+2024-04-14 09:11:18 INFO     127.0.0.1 - - [14/Apr/2024 09:11:18] "[35m[1mGET /elektrum-fetch/ HTTP/1.1[0m" 500 -
+2024-04-14 09:11:18 INFO     127.0.0.1 - - [14/Apr/2024 09:11:18] "[36mGET /elektrum-fetch/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-04-14 09:11:18 INFO     127.0.0.1 - - [14/Apr/2024 09:11:18] "[36mGET /elektrum-fetch/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-04-14 09:11:18 INFO     127.0.0.1 - - [14/Apr/2024 09:11:18] "[36mGET /elektrum-fetch/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-04-14 09:11:18 INFO     127.0.0.1 - - [14/Apr/2024 09:11:18] "[36mGET /elektrum-fetch/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-04-14 09:11:44 INFO      * Detected change in '/Users/eriksklotins/Documents/notebooks/elektrum-ha-import/web-api.py', reloading
+2024-04-14 09:11:53 INFO     Starting import
+2024-04-14 09:11:53 INFO     Fetching results between 2024-04-14 and 2024-04-13
+2024-04-14 09:11:53 INFO     Nothing to import
+2024-04-14 09:11:53 INFO     Updating price info
+2024-04-14 09:11:53 INFO     Price info: 0 rows updated with [COMMIT]
+2024-04-14 09:11:53 INFO     Import done!
+2024-04-14 09:11:53 INFO     127.0.0.1 - - [14/Apr/2024 09:11:53] "[35m[1mGET /elektrum-fetch/ HTTP/1.1[0m" 500 -
+2024-04-14 09:11:53 INFO     127.0.0.1 - - [14/Apr/2024 09:11:53] "[36mGET /elektrum-fetch/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-04-14 09:11:53 INFO     127.0.0.1 - - [14/Apr/2024 09:11:53] "[36mGET /elektrum-fetch/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-04-14 09:11:53 INFO     127.0.0.1 - - [14/Apr/2024 09:11:53] "[36mGET /elektrum-fetch/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-04-14 09:11:53 INFO     127.0.0.1 - - [14/Apr/2024 09:11:53] "[36mGET /elektrum-fetch/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-04-14 09:12:20 INFO      * Detected change in '/Users/eriksklotins/Documents/notebooks/elektrum-ha-import/web-api.py', reloading
+2024-04-14 09:12:23 ERROR    Auth failed!
+2024-04-14 09:12:23 INFO     Starting import
+2024-04-14 09:12:23 INFO     Fetching results between 2024-04-14 and 2024-04-13
+2024-04-14 09:12:23 INFO     Nothing to import
+2024-04-14 09:12:23 INFO     Updating price info
+2024-04-14 09:12:23 INFO     Price info: 0 rows updated with [COMMIT]
+2024-04-14 09:12:23 INFO     Import done!
+2024-04-14 09:12:23 INFO     127.0.0.1 - - [14/Apr/2024 09:12:23] "GET /elektrum-fetch/ HTTP/1.1" 200 -

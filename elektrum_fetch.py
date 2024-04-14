@@ -3,6 +3,7 @@ def fetch_daily_consumption(y,m,d, session):
 
     # url = "https://mans.elektrum.lv/lv/majai/mani-parskati/viedo-skaititaju-paterinu-parskats/consumption.json?step=D&fromDate=2021-01-02&tillDate=&compareFromDate=2021-12-21&compareTillDate=&chartType=bar"
     fromDate = f'{y}-{m}-{d}'
+            # https://mans.elektrum.lv/lv/majai/mani-parskati/viedo-skaititaju-paterinu-parskats/consumption.json
     url = f"https://mans.elektrum.lv/lv/majai/mani-parskati/viedo-skaititaju-paterinu-parskats/consumption.json?step=D&fromDate={fromDate}"
     headers = {
          "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
@@ -18,10 +19,12 @@ def fetch_daily_consumption(y,m,d, session):
         "sec-fetch-user": "?1",
         "upgrade-insecure-requests": "1",
     }
-    response = session.get(url, headers=headers, allow_redirects=False)
+    response = session.get(url, headers=headers, allow_redirects=True)
 
     if response.status_code == 200:
         return response.json()
     else:
-        print('Something went wrong! HTTP', response.status_code)
+        
+        # raise  Exception(f'Something went wrong! HTTP {response.status_code}')
+        # print(response.text)
         return None

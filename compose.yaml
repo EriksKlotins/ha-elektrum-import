@@ -1,0 +1,13 @@
+version: "3"
+services:
+  cron-test-container:
+    image: "58c7d0609afe"
+    container_name: elektrum-import
+    # command: tail -f /dev/null
+    # volumes:
+      # - /Users/eriksklotins/My Drive/_BTH/SERT/_Collaborations/Spotify/MarcusHamrin data work/Notebooks:/home/jovyan/work
+      # - /Users/eriksklotins/Documents/notebooks:/home/jovyan/notebooks
+    ports:
+      - 5001:5000
+    restart: unless-stopped
+    network_mode: "host"

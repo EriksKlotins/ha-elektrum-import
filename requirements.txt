@@ -1,0 +1,6 @@
+mysql-connector-python
+pandas==2.2.0
+python-dotenv==1.0.1
+requests
+Flask
+Flask-RESTful
