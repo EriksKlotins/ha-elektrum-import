@@ -43,7 +43,28 @@ class ElektrumReadingsModel:
             self.logging.error(f'Error occurred while fetching last reading date: {e}')
             return None  # Or raise an exception, depending on your requirement
 
+    def fetchReadings(self, start, end):
+        try:
+            self.cursor.execute("""
+                    SELECT 
+                        time,
+                        reading,
+                        price_kwh
+                    FROM
+                        elektrum_readings
+                    WHERE
+                        time between %s and %s
+                """, [start.isoformat(), end.isoformat()])
+            rows = []
+            for row in self.cursor:
+                rows.append([row[0].isoformat(), row[1], None if row[2] is None else float(row[2]) ]) #, float(row[2])])
+                # pass
+            return rows
 
+        except Exception as e:
+            self.logging.error(f'Error occurred fetchReadings(): {e}')
+            print(e)
+            return [1]
 
 
 

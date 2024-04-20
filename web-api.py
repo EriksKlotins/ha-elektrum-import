@@ -48,7 +48,7 @@ class Response(Resource):
 		logging.info('Starting import')
 		t_start = model.getLastReadingDate() + datetime.timedelta(hours=1)
 	# # t_end = t_start + datetime.timedelta(hours= 100)
-		t_end = datetime.datetime.today() - datetime.timedelta(1)
+		t_end = datetime.datetime.today().replace(hour=23, minute=59, second=59) - datetime.timedelta(1)
 
 
 		values = worker.fetchRange(t_start, t_end)
@@ -72,13 +72,51 @@ class Test(Resource):
 		return "This is a test!"
 
 
-api.add_resource(Response, '/elektrum-fetch/')
+		
+class FetchReadings(Resource):
 
+	def __init__(self):
+		self.reqparse = reqparse.RequestParser()
+		self.reqparse.add_argument('start', 
+			type =		lambda param: datetime.datetime.fromisoformat(param), 
+			default =	datetime.datetime.today() - datetime.timedelta(1),
+			location='args'
+		)
+		self.reqparse.add_argument('end', 
+			type =  	lambda param: datetime.datetime.fromisoformat(param),
+			default =	datetime.datetime.today().replace(hour=23, minute=59, second=59),
+			location='args'
+		)
+		super(FetchReadings, self).__init__()
+
+
+
+	def get(self):
+		# https://stackoverflow.com/questions/48095713/accepting-multiple-parameters-in-flask-restful-add-resource
+		args = self.reqparse.parse_args()
+		logger = logging.getLogger(__name__)
+		dir_path = os.path.dirname(os.path.realpath(__file__))
+		config = dotenv_values(f"{dir_path}/.env")
+		logging.basicConfig(
+			filename='elektrum-fetch.log', 
+			level=logging.INFO,
+			format='%(asctime)s %(levelname)-8s %(message)s',
+			datefmt='%Y-%m-%d %H:%M:%S'
+		)
+
+		model = ElektrumReadingsModel(config, logger)
+		result = model.fetchReadings(args['start'], args['end'])
+		return result
+
+api.add_resource(Response, '/elektrum-fetch/')
+api.add_resource(FetchReadings, '/fetch/')
 api.add_resource(Test, '/test/')
 
 
+
+# te vajag kaut kād endpoint, lai dabūtu rādījumus
+
 if __name__ == "__main__":
-  app.run(debug=True,host='0.0.0.0', port=config['PORT'])
-  print(app)
+  app.run(debug=True,host=config['HOST'], port=config['PORT'])
 
 
