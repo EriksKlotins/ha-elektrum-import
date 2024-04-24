@@ -1,8 +1,10 @@
+# Build with
+# docker build --tag=elektrum_api ./
 version: "3"
 services:
-  cron-test-container:
-    image: "58c7d0609afe"
-    container_name: elektrum-import
+  elektrum_api_container:
+    container_name: elektrum_api
+    image: elektrum_api
     # command: tail -f /dev/null
     # volumes:
       # - /Users/eriksklotins/My Drive/_BTH/SERT/_Collaborations/Spotify/MarcusHamrin data work/Notebooks:/home/jovyan/work
@@ -10,4 +12,4 @@ services:
     ports:
       - 5001:5000
     restart: unless-stopped
-    network_mode: "host"
+    # network_mode: "host"

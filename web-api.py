@@ -69,7 +69,7 @@ class Response(Resource):
 
 class Test(Resource):
 	def get(self):
-		return "This is a test!"
+		return "This is a test!, Yo"
 
 
 		
