@@ -17,7 +17,8 @@ class ElektrumFetch:
         self.session = requests.session()
         self.config = config
         self.logging = logging
-        self.setElektrumSession()
+        # if self.setElektrumSession() == None:
+        #     raise Exception("Authentiation failed!")
      
 
     def fetch_daily_consumption(self, y,m,d):
@@ -48,8 +49,8 @@ class ElektrumFetch:
                 self.logging.error(f'Something went wrong with response! {url} HTTP {response.status_code}')
                 # raise  Exception(f'Something went wrong! HTTP {response.status_code}')
                 return None
-        except:
-            self.logging.error(f'Something went wrong with calling the url! {url}')
+        except Exception as e:
+            self.logging.error(f'Something went wrong with calling the url! {url} {e}')
 
 
     def setElektrumSession(self):
@@ -58,6 +59,7 @@ class ElektrumFetch:
             auth_result = authenticate(self.config['USERNAME'], self.config['PASSWORD'], token, self.session)
         except:
             self.logging.error('Auth failed!')
+            return None
         return self.session
 
     def fetchOne(self, year, month, day):
@@ -68,7 +70,7 @@ class ElektrumFetch:
             if result is None:
                 error_msg = f'Failed to fetch results {year}/{month}/{day}'
                 self.logging.error(error_msg)
-                raise FetchDataError(error_msg)
+                raise Exception(error_msg)
             elif 'data' in result:
                 data = result['data'].get('A+', [])
                 for row in data:
@@ -80,13 +82,11 @@ class ElektrumFetch:
                 self.logging.warning(warning_msg)
 
             return buffer
-        except FetchDataError as e:
+        except Exception as e:
             # Handle specific error condition if needed
             self.logging.error(str(e))
             return []
-        except Exception as e:
-            self.logging.error(f"An unexpected error occurred: {str(e)}")
-            return []
+       
 
 
 

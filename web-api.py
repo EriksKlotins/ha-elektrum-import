@@ -42,10 +42,20 @@ class Response(Resource):
 
 
 	# # print(config)
+		logging.info('Starting import')
+
+
+
 		model = ElektrumReadingsModel(config, logger)
 		worker = ElektrumFetch(config, logger )
 
-		logging.info('Starting import')
+
+		elektrum_session = worker.setElektrumSession()
+		logging.info(elektrum_session)
+		# print(elektrum_session)
+
+
+		
 		t_start = model.getLastReadingDate() + datetime.timedelta(hours=1)
 	# # t_end = t_start + datetime.timedelta(hours= 100)
 		t_end = datetime.datetime.today().replace(hour=23, minute=59, second=59) - datetime.timedelta(1)
